@@ -104,7 +104,7 @@ function ItemCard({ item, onDelete }) {
       <div className="card-body">
         <div className="card-meta">
           <span className="card-category">{item.category}</span>
-          <span className="card-price">Rs. {item.price.toFixed(2)}</span>
+          <span className="card-price">Rs. {Number(item.price || 0).toFixed(2)}</span>
         </div>
         
         <h3 className="card-title">{item.name}</h3>

@@ -1,0 +1,12 @@
+# Master Netlify Configuration for Mono-repo Workspace
+# This ensures Netlify knows to enter the frontend directory, build it, and deploy it.
+
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
